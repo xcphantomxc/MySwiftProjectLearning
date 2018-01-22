@@ -118,8 +118,23 @@ class ViewController: UIViewController {
         /*
          可选类型：
          可选类型表示：有值等于x 或者 没有值
-         Swift 的 int 类型有一种构造器，是将一个 string 转成 int 值，不过不是所有字符都可以转换成整数，字符串“123”
+         Swift 的 int 类型有一种构造器，是将一个 string 转成 int 值，不过不是所有字符都可以转换成整数，字符串“123”可以转换成数字 123，但是字符串"hello world" 不行；
          */
+        let possibleNumber = "123"
+        let convertedNumer = Int(possibleNumber)
+        //convertedNumber 被推测为类型 “int” 或者类型“optional Int”
+        
+        /*
+         因为该构造器可能会失败，所以它返回一个可选类型(optional) Int ，而不是一个 Int 。一个可选的 Int 被写作 Int? 而不是 Int 。问号暗示包含的值是可选类型，也就是说可能包含 Int 值也可能不包含值。(不 能包含其他任何值比如 Bool 值或者 String 值。只能是 Int 或者什么都没有。)
+         nil 不能用于非可选的常量和变量。如果你的代码中有常量或者变量需要处理值缺失的情况，请把它们声明成
+         对应的可选类型。
+
+         */
+        
+        //如果你声明一个可选常量或者变量但是没有赋值，它们会自动被设置为 nil
+        var surveyAnswer: String! //被设置为 nil
+        
+        
         
         
     }
